@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wood Defect Detection - Frontend
 
-## Getting Started
+Modern web interface for the Wood Defect Detection system, built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+## Features
 
+- Modern, responsive UI with shadcn-ui components
+- Drag-and-drop file upload
+- Real-time image analysis
+- Interactive image previews with modal views
+- Status indicators for defect detection
+- Detailed analysis results in a card layout
+
+## Tech Stack
+
+- Next.js 13+
+- React
+- Tailwind CSS
+- shadcn-ui
+- TypeScript
+
+## Setup
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [repository-url]
+cd wood-defect-detection-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will be available at http://localhost:3000
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── src/
+│   ├── app/
+│   │   ├── page.tsx        # Main application page
+│   │   ├── layout.tsx      # Root layout component
+│   │   └── globals.css     # Global styles
+│   ├── components/
+│   │   └── ui/            # UI components
+│   └── lib/
+│       └── utils.ts       # Utility functions
+├── public/                # Static files
+└── next.config.mjs       # Next.js configuration
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The frontend expects the backend server to be running on http://localhost:3001. If you need to change this, update the API endpoint in `src/app/page.tsx`.
 
-## Deploy on Vercel
+## UI Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application uses shadcn-ui components for a consistent and modern look:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Cards for displaying analysis results
+- Dialog for full-size image previews
+- Custom dropzone for file uploads
+- Status indicators for defect detection
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
