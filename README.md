@@ -2,6 +2,8 @@
 
 Modern web interface for the Wood Defect Detection system, built with Next.js, React, and Tailwind CSS.
 
+Backend server repo : https://github.com/amiril84/wood-defect-detection-backend
+
 ## Features
 
 - Modern, responsive UI with shadcn-ui components
