@@ -16,6 +16,9 @@ interface AnalysisResult {
   };
 }
 
+// Backend API URL
+const API_URL = 'https://objects-defect-detection-backend-production.up.railway.app';
+
 export default function Home() {
   const [results, setResults] = useState<AnalysisResult[]>([]);
   const [isUploading, setIsUploading] = useState(false);
@@ -57,15 +60,18 @@ export default function Home() {
         formData.append('files', file);
       });
 
-      const response = await fetch('http://localhost:3001/api/analyze', {
+      const response = await fetch(`${API_URL}/api/analyze`, {
         method: 'POST',
         body: formData,
       });
 
       const data = await response.json();
       if (data.success) {
-        setResults(data.results);
-        // Clear any previous errors on success
+        setResults(data.results.map((result: AnalysisResult) => ({
+          ...result,
+          imagePath: `${API_URL}/uploads/${result.imagePath}`,
+          thumbnailPath: `${API_URL}/uploads/${result.thumbnailPath}`
+        })));
         clearError();
       } else {
         throw new Error(data.error || 'Failed to analyze images');
@@ -181,7 +187,7 @@ export default function Home() {
                     <DialogTrigger asChild>
                       <div className="relative h-48 cursor-pointer">
                         <Image
-                          src={`http://localhost:3001/uploads/${result.thumbnailPath}`}
+                          src={result.thumbnailPath}
                           alt={result.imageName}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -195,7 +201,7 @@ export default function Home() {
                       </DialogTitle>
                       <div className="relative h-[600px]">
                         <Image
-                          src={`http://localhost:3001/uploads/${result.imagePath}`}
+                          src={result.imagePath}
                           alt={result.imageName}
                           fill
                           sizes="100vw"
