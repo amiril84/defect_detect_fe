@@ -1,15 +1,19 @@
-# Wood Defect Detection - Frontend
+# Modern Object Defect Detection - Frontend
 
-Modern web interface for the Wood Defect Detection system, built with Next.js, React, and Tailwind CSS.
+Modern web interface for the Object Defect Detection system, built with Next.js, React, and Tailwind CSS. This application uses AI to analyze images and detect defects in various objects.
 
 ## Features
 
 - Modern, responsive UI with shadcn-ui components
 - Drag-and-drop file upload
-- Real-time image analysis
+- Real-time object analysis and defect detection
 - Interactive image previews with modal views
 - Status indicators for defect detection
-- Detailed analysis results in a card layout
+- Detailed analysis results including:
+  - Object identification
+  - Defect status
+  - Condition explanation
+- Support for multiple image uploads
 
 ## Tech Stack
 
@@ -24,7 +28,7 @@ Modern web interface for the Wood Defect Detection system, built with Next.js, R
 1. Clone the repository:
 ```bash
 git clone [repository-url]
-cd wood-defect-detection-frontend
+cd modern-object-defect-detection-frontend
 ```
 
 2. Install dependencies:
@@ -67,6 +71,7 @@ The application uses shadcn-ui components for a consistent and modern look:
 - Dialog for full-size image previews
 - Custom dropzone for file uploads
 - Status indicators for defect detection
+- Error handling with visual feedback
 
 ## Contributing
 
