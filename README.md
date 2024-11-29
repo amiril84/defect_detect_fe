@@ -2,7 +2,7 @@
 
 Modern web interface for the Object Defect Detection system, built with Next.js, React, and Tailwind CSS. This application uses AI to analyze images and detect defects in various objects.
 
-Backend server repo : https://github.com/amiril84/wood-defect-detection-backend
+Backend server repo : https://github.com/amiril84/objects-defect-detection-backend
 
 ## Features
 
