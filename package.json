@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx http-server ./dist",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
