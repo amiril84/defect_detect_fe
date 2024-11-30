@@ -16,7 +16,10 @@ const nextConfig = {
       },
     ],
   },
-  output: 'standalone'
-};
+  output: 'standalone',
+  experimental: {
+    outputStandalone: true,
+  },
+}
 
 export default nextConfig;
