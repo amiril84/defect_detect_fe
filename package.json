@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run css && next build",
-    "css": "tailwindcss -i ./src/app/globals.css -o ./src/app/output.css",
+    "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
     "lint": "next lint",
     "postinstall": "npx tailwindcss init -p"
