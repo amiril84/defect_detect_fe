@@ -8,6 +8,12 @@ const nextConfig = {
         port: '3001',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'objects-defect-detection-backend-production.up.railway.app',
+        port: '',
+        pathname: '/uploads/**',
+      },
     ],
   },
 };
